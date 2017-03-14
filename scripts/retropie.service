@@ -3,7 +3,7 @@ Conflicts = mediacenter.service
 
 [Service]
 PermissionsStartOnly = yes
-ExecStart = /opt/retropie/supplementary/emulationstation/emulationstation
+ExecStart = /opt/retropie/supplementary/emulationstation/emulationstation.sh
 ExecStopPost = /bin/systemctl start mediacenter.service
 StandardInput = tty
 StandardOutput = tty
