@@ -53,7 +53,7 @@ do
 # download the retrosmc scripts and files
 
             wget --no-check-certificate -w 4 -O /home/osmc/RetroPie/scripts/retropie.sh https://raw.githubusercontent.com/CodeChief117/retrosmc/master/scripts/retropie.sh
-            wget --no-check-certificate -w 4 -O /etc/systemd/system/retropie.service https://raw.githubusercontent.com/CodeChief117/retrosmc/master/scripts/retropie.service
+            wget --no-check-certificate -w 4 -O /lib/systemd/system/retropie.service https://raw.githubusercontent.com/CodeChief117/retrosmc/master/scripts/retropie.service
             chmod +x /home/osmc/RetroPie/scripts/retropie.sh
             systemctl daemon-reload
 
@@ -146,8 +146,8 @@ _EOF_
 
             mv /home/osmc/install-retrosmc.sh.1 /home/osmc/install-retrosmc.sh
             mv /home/osmc/RetroPie/scripts/retropie.sh.1 /home/osmc/RetroPie/scripts/retropie.sh
-            mv /home/osmc/RetroPie/scripts/retropie.service.1 /etc/systemd/system/retropie.service
-            systemctl daemon-reload
+            sudo mv /home/osmc/RetroPie/scripts/retropie.service.1 /lib/systemd/system/retropie.service
+            sudo systemctl daemon-reload
             rm /home/osmc/RetroPie/scripts/retropie_watchdog.sh
 
 # restart script
