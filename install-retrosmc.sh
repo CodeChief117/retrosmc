@@ -52,8 +52,8 @@ do
 
 # download the retrosmc scripts and files
 
-            wget --no-check-certificate -w 4 -O /home/osmc/RetroPie/scripts/retropie.sh https://raw.githubusercontent.com/mcobit/retrosmc/master/scripts/retropie.sh
-            wget --no-check-certificate -w 4 -O /etc/systemd/system/retropie.service https://raw.githubusercontent.com/mcobit/retrosmc/master/scripts/retropie.service
+            wget --no-check-certificate -w 4 -O /home/osmc/RetroPie/scripts/retropie.sh https://raw.githubusercontent.com/CodeChief117/retrosmc/master/scripts/retropie.sh
+            wget --no-check-certificate -w 4 -O /etc/systemd/system/retropie.service https://raw.githubusercontent.com/CodeChief117/retrosmc/master/scripts/retropie.service
             chmod +x /home/osmc/RetroPie/scripts/retropie.sh
             systemctl daemon-reload
 
@@ -100,7 +100,7 @@ _EOF_
 
 # get the addon archive file from github
 
-	  wget --no-check-certificate -w 4 -O plugin.program.retrosmc-launcher-0.0.2.tgz https://github.com/mcobit/retrosmc/raw/master/plugin.program.retrosmc-launcher-0.0.2.tgz 2>&1 | grep --line-buffered -oP "(\d+(\.\d+)?(?=%))" | dialog --title "Downloading Addon" --gauge "\nPlease wait...\n"  11 70
+	  wget --no-check-certificate -w 4 -O plugin.program.retrosmc-launcher-0.0.2.tgz https://github.com/CodeChief117/retrosmc/raw/master/plugin.program.retrosmc-launcher-0.0.2.tgz 2>&1 | grep --line-buffered -oP "(\d+(\.\d+)?(?=%))" | dialog --title "Downloading Addon" --gauge "\nPlease wait...\n"  11 70
 
 # extract the addon to the kodi addon directory
           if [[ -d /home/osmc/.kodi/addons/plugin.program.retropie-launcher ]]; then
@@ -136,9 +136,9 @@ _EOF_
 
 # download new versions of all scripts and make them executable
 
-            wget --no-check-certificate -w 4 -O /home/osmc/RetroPie/scripts/retropie.sh.1 https://raw.githubusercontent.com/mcobit/retrosmc/master/scripts/retropie.sh
-            wget --no-check-certificate -w 4 -O /home/osmc/RetroPie/scripts/retropie.service.1 https://raw.githubusercontent.com/mcobit/retrosmc/master/scripts/retropie.service
-            wget --no-check-certificate -w 4 -O /home/osmc/install-retrosmc.sh.1 https://raw.githubusercontent.com/mcobit/retrosmc/master/install-retrosmc.sh
+            wget --no-check-certificate -w 4 -O /home/osmc/RetroPie/scripts/retropie.sh.1 https://raw.githubusercontent.com/CodeChief117/retrosmc/master/scripts/retropie.sh
+            wget --no-check-certificate -w 4 -O /home/osmc/RetroPie/scripts/retropie.service.1 https://raw.githubusercontent.com/CodeChief117/retrosmc/master/scripts/retropie.service
+            wget --no-check-certificate -w 4 -O /home/osmc/install-retrosmc.sh.1 https://raw.githubusercontent.com/CodeChief117/retrosmc/master/install-retrosmc.sh
             chmod +x /home/osmc/RetroPie/scripts/retropie.sh.1
             chmod +x /home/osmc/install-retrosmc.sh.1
 
