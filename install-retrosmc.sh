@@ -100,18 +100,18 @@ _EOF_
 
 # get the addon archive file from github
 
-	  wget --no-check-certificate -w 4 -O plugin.program.retrosmc-launcher-0.0.2.tgz https://github.com/CodeChief117/retrosmc/raw/master/plugin.program.retrosmc-launcher-0.0.2.tgz 2>&1 | grep --line-buffered -oP "(\d+(\.\d+)?(?=%))" | dialog --title "Downloading Addon" --gauge "\nPlease wait...\n"  11 70
+	  wget --no-check-certificate -w 4 -O plugin.program.retrosmc-launcher-0.0.3.tgz https://github.com/CodeChief117/retrosmc/raw/master/plugin.program.retrosmc-launcher-0.0.3.tgz 2>&1 | grep --line-buffered -oP "(\d+(\.\d+)?(?=%))" | dialog --title "Downloading Addon" --gauge "\nPlease wait...\n"  11 70
 
 # extract the addon to the kodi addon directory
           if [[ -d /home/osmc/.kodi/addons/plugin.program.retropie-launcher ]]; then
           rm -r /home/osmc/.kodi/addons/plugin.program.retropie-launcher
 	  fi
-	  (pv -n plugin.program.retrosmc-launcher-0.0.2.tgz | sudo tar xzf - -C /home/osmc/.kodi/addons/ ) 2>&1 | dialog --title "Extracting Addon" --gauge "\nPlease wait...\n" 11 70
+	  (pv -n plugin.program.retrosmc-launcher-0.0.3.tgz | sudo tar xzf - -C /home/osmc/.kodi/addons/ ) 2>&1 | dialog --title "Extracting Addon" --gauge "\nPlease wait...\n" 11 70
 	  dialog --backtitle "RetroPie-OSMC setup script" --title "Installing Addon" --msgbox "\nAddon installed.\n" 11 70
 
 # remove archive file
 
-          rm plugin.program.retrosmc-launcher-0.0.2.tgz
+          rm plugin.program.retrosmc-launcher-0.0.3.tgz
 
 # restart script
 
